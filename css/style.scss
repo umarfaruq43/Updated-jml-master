@@ -1,0 +1,520 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #000;
+    position: absolute;
+    z-index: 1;
+    text-transform: uppercase;
+
+    .logo{
+
+        img{
+            width: 5%;
+            height: 5%;
+        }
+    }
+
+    nav{
+        .mobile-menu{
+            color: #fff;
+            font-size: 30px;
+            display: none;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            li{
+                padding-left: 15px;
+                font-size: 16px;
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all .3s linear;
+
+                    &:hover{
+                        color: lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*BANNER*/
+
+#banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url(../img/austin-distel-7uoMmzPd2JA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+
+    h2{
+        font-size: 50px;
+        color: goldenrod;
+    }
+
+    p{
+        font-size: 30px;
+    }
+}
+
+/*ABOUT*/
+
+#about{
+    padding: 3rem 5rem;
+
+    .about-boxes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+        padding: 1rem;
+        box-shadow: 4px 4px 6px #ccc,
+                    -4px -4px 6px #ccc;
+
+        .about-box{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .about-box-2{
+            h3{
+                text-align: center;
+                font-size: 25px;
+                color: #5c768d;
+            }
+
+            p{
+                font-size: 18px;
+            }
+
+            .icon-boxes{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .icon i{
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(17, 150, 233);
+                    padding: 1.3rem;
+                    font-size: 35px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all .3s linear;
+
+                    &:hover{
+                        background-color: gold;
+                        color: rgb(17, 150, 233);
+                    }
+                }
+
+                .content{
+                    margin-left: 4%;
+                    h3{
+                        text-align: left;
+                        font-size: 22px;
+                        color: rgb(46, 146, 207);
+                    }
+                }
+            }
+
+            .icon-boxes-2{
+                @extend .icon-boxes;
+            }
+            
+        }
+    }
+}
+
+/*BOXES*/
+
+#boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem 4rem;
+    background-color: rgb(236, 233, 233);
+    text-align: center;
+    grid-gap: 40px;
+    overflow-x: hidden;
+
+    .box{
+        background-color: #fff;
+        padding: 2rem 4rem;
+        box-shadow: 4px 4px 7px #ccc,
+                   -4px -4px 7px #ccc;
+        i{
+            font-size: 50px;
+            color: rgb(46, 146, 207);
+        }
+        h3{
+            font-size: 26px;
+            color: goldenrod;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    
+    }
+}
+
+/*CLIENT*/
+
+#client{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url(../img/freestocks-org-_3Q3tsJ01nc-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 3rem 4rem;
+    color:#fff;
+
+    h2{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 28px;
+        color: goldenrod;
+    }
+}
+
+/*PLAN*/
+
+#plan{
+    text-align: center;
+    padding: 3rem 5rem;
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    .stages{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        .stage1, .stage2, .stage3{
+            h3{
+                font-size: 22px;
+            }
+
+            i{
+                font-size: 30px;
+                color: rgb(17, 150, 233);
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                padding: 1rem;
+                box-shadow: 4px 4px 8px #ccc,
+                           -4px -4px 8px #ccc;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+
+        
+
+    }
+}
+
+#banner-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url(../img/aiony-haust-uUem73YWgSI-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.9;
+
+    h2{
+      font-size: 40px;
+    }
+
+    ul{
+        list-style-type: none;
+        li{
+            font-size: 18px;
+            i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+/*BEGINNER STAGE*/
+#beginner{
+    @extend #plan;
+
+    h2{
+        font-size: 40px;
+    }
+
+    .beginner-stages{
+        @extend .stages;
+    }
+}
+
+/*PACE SETTER*/
+#pace-setter{
+    @extend #beginner;
+
+    .pace-setter-stages{
+        @extend .stages
+    }
+}
+
+/*PROFESSIONAL STAGE*/
+#professional{
+    @extend #plan;
+
+    .professional-stages{
+        @extend .stages;
+    }
+}
+
+/*MASTER STAGES*/
+
+#master{
+    @extend #plan;
+
+    .master-stages{
+        @extend .stages;
+        grid-template-columns: repeat(4, 1fr);
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#grandmaster{
+    @extend #plan;
+
+    .grandmaster-stages{
+        @extend .stages;
+        grid-template-columns: repeat(4, 1fr);
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#Sliver{
+    @extend #plan;
+
+    .sliver-stages{
+        @extend .stages;
+        grid-template-columns: repeat(4, 1fr);
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#diamond{
+    @extend #plan;
+
+    .diamond-stages{
+        @extend .stages;
+        grid-template-columns: repeat(4, 1fr);
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#gold{
+    @extend #plan;
+
+    .gold-stages{
+        @extend .stages;
+        grid-template-columns: repeat(4, 1fr);
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+
+//CONTACT.
+
+#contact{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    text-align: center;
+
+    h2{
+        font-size: 35px;
+        margin-bottom: 5%;
+    }
+
+    .cont-box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .cont{
+            i{
+                font-size: 30px;
+                color:  rgb(4, 127, 204);
+            }
+            h3{
+                font-size: 25px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    form{
+        margin: 4rem;
+            
+        input[type="text"]{
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 20px;
+        }
+
+        input[type="password"]{
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 20px;
+        }
+        input[type="email"]{
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 20px;
+        }
+        input[type="submit"]{
+            width: 50%;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 20px;
+            background-color: rgb(4, 127, 204);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all .3s linear;
+
+            &:hover{
+                background-color: rgb(17, 150, 233);
+            }
+        }
+        textarea{
+            width: 100%;
+            padding: 4rem 1rem;
+            margin: 1rem;
+            font-size: 20px;
+        }
+        
+    }
+}
+
+//FOOTER.
+
+footer{
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+
+    h3{
+        font-size: 40px;
+    }
+
+    .icons{
+
+        a{
+            color: #fff;
+            text-decoration: none;
+            
+
+         i{
+            font-size: 30px;
+            padding: 1%;
+            background-color: rgb(17, 150, 233);
+            border-radius: 50px;
+            margin: 1rem;
+            cursor: pointer;
+            transition: all .3s linear;
+
+            &:hover{
+                background-color: rgb(7, 66, 83);
+            }
+         }
+        }
+    }
+
+    p{
+        font-size: 22px;
+
+        span{
+            color: rgb(17, 150, 233);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

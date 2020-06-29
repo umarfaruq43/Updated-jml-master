@@ -1,0 +1,422 @@
+@media screen and (max-width: 767px){
+    #header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: #000;
+        position: absolute;
+        z-index: 1;
+        text-transform: uppercase;
+    
+        .logo{
+    
+            img{
+                width: 10%;
+                height: 10%;
+            }
+        }
+    
+        nav{
+            .mobile-menu {
+                display: block;
+                padding-right: 10px;
+                text-align: right;
+              }
+          
+             .main-menu{
+                  display: none;
+              }
+          
+              ul {
+                  display: block;
+                  text-align: right;
+              }
+          
+              li {
+                  padding: 10px;
+                  font-size: 14px;
+                  text-align: right;
+              }
+    
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        transition: all .3s linear;
+    
+                        &:hover{
+                            color: lightblue;
+                        }
+                    
+                
+            }
+        }
+    }
+
+
+    /*BANNER*/
+
+#banner{
+    h2{
+        font-size: 20px;
+        color: goldenrod;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
+
+/*ABOUT*/
+
+#about{
+    padding: 1rem 1.5rem;
+
+    .about-boxes{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 0.5rem;
+        box-shadow: 3px 3px 6px #ccc,
+                    -3px -3px 6px #ccc;
+
+        .about-box{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .about-box-2{
+            h3{
+                text-align: center;
+                font-size: 18px;
+                color: #5c768d;
+            }
+
+            p{
+                font-size: 14px;
+            }
+
+            .icon-boxes{
+               flex-wrap: wrap;
+               flex-direction: column;
+
+                .icon i{
+                    padding: 0.5rem;
+                    font-size: 20px;
+                   
+
+                    &:hover{
+                        background-color: gold;
+                        color: rgb(17, 150, 233);
+                    }
+                }
+
+                .content{
+                    margin-left: 0;
+                    h3{
+                        text-align: center;
+                        font-size: 16px;
+                        color: rgb(46, 146, 207);
+                    }
+                }
+            }
+
+            .icon-boxes-2{
+                @extend .icon-boxes;
+            }
+            
+        }
+    }
+}
+
+/*BOXES*/
+
+#boxes{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2rem;
+    background-color: rgb(236, 233, 233);
+    text-align: center;
+    grid-gap: 20px;
+
+    .box{
+        background-color: #fff;
+        padding: 1rem 1.7rem;
+        i{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    
+    }
+}
+
+/*CLIENT*/
+
+#client{
+    padding: 1.3rem 1.8rem;
+    color:#fff;
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+/*PLAN*/
+
+#plan{
+    text-align: center;
+    padding: 1.4rem 2.2rem;
+
+    h3{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+    .stages{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+
+        .stage1, .stage2, .stage3{
+            h3{
+                font-size: 16px;
+            }
+
+            i{
+                font-size: 20px;
+                padding: 0.8rem;
+                
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+
+        
+
+    }
+}
+
+#banner-2{
+    padding: 2.7rem 1.4rem;
+    line-height: 1.5;
+
+    h2{
+      font-size: 18px;
+    }
+
+    ul{
+        li{
+            font-size: 14px;
+            i{
+                padding-right: 7px;
+            }
+        }
+    }
+}
+
+/*BEGINNER STAGE*/
+#beginner{
+    @extend #plan;
+
+    h2{
+        font-size: 22px;
+    }
+
+    .beginner-stages{
+        @extend .stages;
+    }
+}
+
+/*PACE SETTER*/
+#pace-setter{
+    @extend #beginner;
+
+    .pace-setter-stages{
+        @extend .stages
+    }
+}
+
+/*PROFESSIONAL STAGE*/
+#professional{
+    @extend #plan;
+
+    .professional-stages{
+        @extend .stages;
+    }
+}
+
+/*MASTER STAGES*/
+
+#master{
+    @extend #plan;
+
+    .master-stages{
+        @extend .stages;
+        grid-template-columns: 1fr;
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#grandmaster{
+    @extend #plan;
+
+    .grandmaster-stages{
+        @extend .stages;
+        grid-template-columns: 1fr;
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#Sliver{
+    @extend #plan;
+
+    .sliver-stages{
+        @extend .stages;
+        grid-template-columns: 1fr;
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#diamond{
+    @extend #plan;
+
+    .diamond-stages{
+        @extend .stages;
+        grid-template-columns: 1fr;
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+#gold{
+    @extend #plan;
+
+    .gold-stages{
+        @extend .stages;
+        grid-template-columns: 1fr;
+
+        .stage4{
+            @extend .stage3;
+        }
+    }
+}
+
+
+    
+    #contact{
+        padding: 0.8rem;
+    
+        h2{
+            font-size: 18px;
+        }
+    
+        .cont-box{
+            grid-template-columns: 1fr;
+    
+            .cont{
+                
+                h3{
+                    font-size: 16px;
+                }
+    
+                p{
+                    font-size: 14px;
+                }
+            }
+    
+        }
+    
+        form{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+                
+            input[type="text"]{
+                width: 80%;
+                padding: 0.5rem;
+                margin: 0.4rem;
+                font-size: 16px;
+            }
+            input[type="password"]{
+                width: 80%;
+                padding: 0.5rem;
+                margin: 0.4rem;
+                font-size: 16px;
+            }
+            input[type="email"]{
+                width: 80%;
+                padding: 0.5rem;
+                margin: 0.4rem;
+                font-size: 16px;
+            }
+            input[type="submit"]{
+                width: 40%;
+                padding: 0.5rem;
+                margin: 0.4rem;
+                font-size: 15px;
+            }
+            
+            textarea{
+                width: 80%;
+                padding: 1.5rem 0.5rem;
+                margin: 0.4rem;
+                font-size: 16px;
+            }
+            
+        }
+    }
+    
+    footer{
+        padding: 0.5rem;
+        h3{
+            font-size: 22px;
+        }
+    
+        .icons{
+    
+            a{
+                color: #fff;
+                text-decoration: none;
+                
+    
+             i{
+                font-size: 22px;
+                padding: 2%;
+                margin: 0;
+                cursor: pointer;
+              }
+            }
+        }
+    
+        p{
+            font-size: 18px;
+        }
+    }
+}
